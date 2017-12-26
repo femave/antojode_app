@@ -15,6 +15,7 @@
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
+  "rnpm": { "assets": [ "assets/icon-set-food" ] },
   "jest": {
     "preset": "jest-expo"
   },

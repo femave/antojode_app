@@ -2,13 +2,16 @@
 
 import React from 'react';
 import { Scene, Router, Actions } from 'react-native-router-flux';
-import Food from './components/food/Food';
+import Main from './components/Main';
+import Categories from './components/Categories';
+
 
 const RouterComponent = () => (
     <Router>
       <Scene hideNavBar>
-        <Scene key="food">
-          <Scene key="food" component={Food} title="Food" />
+        <Scene key="home">
+          <Scene hideNavBar key="main" component={Main} title="Antojo De" initial />
+          <Scene hideNavBar key="catgories" component={Categories} title="Antojo De" />
         </Scene>
         {/* <Scene key="drink">
           <Scene key="drink" component={} title="Drink" />

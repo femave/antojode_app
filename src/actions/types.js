@@ -1,0 +1,1 @@
+export const CATEGORIES_BUTTONS = 'categories_buttons'
