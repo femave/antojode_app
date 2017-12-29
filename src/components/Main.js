@@ -1,10 +1,24 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Button, Header, Input, Card, CardSection } from './common';
 import { Actions } from 'react-native-router-flux';
+import { categorieEat, categorieDrink } from '../actions'
 
 class Main extends Component {
+    componentWillMount() {
+        this.setState({})
+    }
+
+    onButtonPress(categorie) {
+        if(categorie == 'eat'){
+            this.props.categorieEat({ value: categorie })
+        }else {
+            this.props.categorieDrink({ value: categorie })
+        }
+        Actions.catgories()
+    }
     
     render() {
         return (
@@ -14,14 +28,14 @@ class Main extends Component {
                     <Button 
                         iconName="food" 
                         title="Eat" 
-                        iconSize={80} 
-                        onPress={() => Actions.catgories('Eat')}
+                        iconSize={80}
+                        onPress={() => this.onButtonPress('eat')}
                     />
                     <Button 
                       iconName="food-fork-drink" 
                       title="Drink"
                       iconSize={80} 
-                      onPress={() => Actions.catgories('Drink')}
+                      onPress={() => this.onButtonPress('drink')}
                     />
                 </CardSection>
                 <CardSection style={{borderWidth: 2 , borderColor: "black"}}>
@@ -39,4 +53,8 @@ const styles = {
     }
 }
 
-export default Main;
+const mapStateToProps = (state) => {
+    return state
+}
+
+export default connect(mapStateToProps, { categorieEat, categorieDrink })(Main);

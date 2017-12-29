@@ -11,7 +11,7 @@ const Header = ({ headerText, home }) => {
     const goToHome = () => {
         if(home){
             return (
-                <TouchableWithoutFeedback onPress={() => Actions.main()} >
+                <TouchableWithoutFeedback onPress={() => Actions.main({ type: 'reset' })} >
                     <View>
                         <Text style={textStyle}>{headerText}</Text>
                     </View>

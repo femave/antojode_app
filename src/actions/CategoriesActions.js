@@ -1,11 +1,18 @@
 'use strict';
 
 import { Actions } from 'react-native-router-flux';
-import { CATEGORIES_BUTTONS } from './types';
+import { CATEGORIES_EAT, CATEGORIES_DRINK } from './types';
 
-export const categories = ({ prop, value }) => {
+export const categorieEat = ({ value }) => {
     return {
-        type: CATEGORIES_BUTTONS,
-        payload: { prop, value }
+        type: CATEGORIES_EAT,
+        payload: { value }
+      };
+}
+
+export const categorieDrink = ({ value }) => {
+    return {
+        type: CATEGORIES_DRINK,
+        payload: { value }
       };
 }
