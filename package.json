@@ -15,14 +15,20 @@
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
-  "rnpm": { "assets": [ "assets/icon-set-food" ] },
+  "rnpm": {
+    "assets": [
+      "assets/icon-set-food"
+    ]
+  },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^23.0.4",
+    "axios": "^0.17.1",
+    "expo": "^24.0.0",
     "react": "16.0.0",
-    "react-native": "0.50.3",
+    "react-native": "0.51.0",
+    "react-native-maps": "^0.19.0",
     "react-native-router-flux": "^4.0.0-beta.24",
     "react-native-vector-icons": "^4.4.3",
     "react-redux": "^5.0.6",

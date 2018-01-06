@@ -50,7 +50,7 @@ class Categories extends Component {
 
     render() {
         return(
-            <Card>
+            <Card style={{flex:1 }}>
                 <Header headerText={this.props.title} home/>                
                 {this.renderButtons()}                
             </Card>
